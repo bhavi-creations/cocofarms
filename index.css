@@ -1,46 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
-*{
-    padding: 0px;
-    margin: 0px;
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+* {
+  padding: 0px;
+  margin: 0px;
 
 }
 
-.logo{
-    background-color: black;
-    text-align: center;
+.logo {
+  background-color: black;
+  text-align: center;
 }
 
 .countdown-container {
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+
+
+}
+
+@media (min-width:1200px) {
+  .countdown-container {
+
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+  }
 }
 
 h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 #countdown {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 #countdown div {
-    font-size: 1.5rem;
-    text-align: center;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 #countdown span {
-    display: block;
-    font-size: 3rem;
-    font-weight: bold;
-    color: #61dafb;
+  display: block;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #61dafb;
 }
 
 
@@ -53,72 +66,466 @@ body {
     color: #333;
   }
    */
-  .content {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    font-family: "poppins";
-  }
-  
-  .download-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    color: #fff;
-    background-color: #007BFF;
-    text-decoration: none;
-    border-radius: 4px;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    transition: background-color 0.3s ease;
-  }
-  
-  .download-button:hover {
-    background-color: #0056b3;
-  }
-  
+.content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: "poppins";
+}
+
+.download-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #007BFF;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #0056b3;
+}
 
 
-  .container {
+
+.container {
+  position: relative;
+}
+
+#sparkles-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.sparkle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle, white, transparent);
+  border-radius: 50%;
+  animation: sparkle-animation 2s ease-out infinite;
+  opacity: 0.8;
+}
+
+@keyframes sparkle-animation {
+  0% {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.5);
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+
+.bg_black {
+  background-color: rgba(0, 0, 0, 0.947);
+  text-align: center;
+
+}
+
+@media (min-width:768px) {
+  .image_size {
+    width: 50%;
+    height: 61vh !important;
+  }
+}
+
+
+
+.last_bg_container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.textContent_color {
+  color: #FFD700;
+  font-family: 'Dancing Script', cursive;
+  font-size: 50px;
+  position: relative;
+  display: inline-block;
+  animation: glitterEffect 2s infinite alternate;
+}
+
+@keyframes glitterEffect {
+  0% {
+    text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700, 0 0 40px rgba(255, 215, 0, 0.7);
+    color: #FFD700;
+  }
+
+  50% {
+    text-shadow: 0 0 15px #FFF, 0 0 25px #FFF, 0 0 35px #FFF, 0 0 45px rgba(255, 255, 255, 0.7);
+    color: #FFFAF0;
+    /* A light cream color to contrast the gold */
+  }
+
+  100% {
+    text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700, 0 0 40px rgba(255, 215, 0, 0.7);
+    color: #FFD700;
+  }
+}
+
+.last_bg {
+  background: linear-gradient(to right, #8e44ad, #f4d03f);
+
+  position: relative;
+  overflow: hidden;
+}
+
+.last_bg_container {
+  position: relative;
+  z-index: 2;
+}
+
+.last_bg p {
+  text-align: center;
+}
+
+.last_bg a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #e7e4de;
+  /* Gold color for link text */
+  transition: all 0.4s ease;
+  background-color: transparent;
+  border: 2px solid #e8b125;
+  /* Thin gold border for a more luxurious feel */
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 20px;
+}
+
+.last_bg a:hover {
+  color: #fff;
+  background-color: #DAA520;
+  /* Gold background when hovered */
+  border: 2px solid #FFD700;
+  /* Lighter gold border on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  /* Slightly increase size on hover */
+}
+
+.last_bg a:active {
+  transform: scale(1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:768px) {
+
+
+  .bag_grdient {
+    font-family: 'Playfair Display', serif;
     position: relative;
-  }
-
-  #sparkles-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 66vh;
+    background: linear-gradient(to right, #8e44ad, #f4d03f);
     overflow: hidden;
+    color: #fff;
+    text-align: center;
+  }
+}
+
+
+.bag_grdient {
+  font-family: 'Playfair Display', serif;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* min-height: 50vh; */
+  background: linear-gradient(to right, #8e44ad, #f4d03f);
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+}
+
+/* Fireworks Canvas */
+#fireworks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Countdown Styling */
+.countdown-wrapper {
+  position: relative;
+  z-index: 2;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.7);
+  animation: fadeIn 2s ease-in-out;
+  max-width: 90%;
+  width: 400px;
+
+}
+
+.countdown-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  animation: textGlow 1.5s infinite alternate;
+}
+
+.countdown-timer {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.countdown-item {
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.countdown-item span {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #f4d03f;
+  animation: pulse 1.5s infinite;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
 
-  .sparkle {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes textGlow {
+  from {
+    text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700;
+  }
+
+  to {
+    text-shadow: 0 0 20px #f4d03f, 0 0 30px #f4d03f;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .countdown-title {
+    font-size: 2rem;
+  }
+
+  .countdown-item span {
+    font-size: 2rem;
+  }
+
+  .countdown-wrapper {
+    padding: 20px;
+    margin-left: 20px;
+  }
+}
+
+
+@media (min-width:992px)   {
+
+  .inner_padding {
+    padding: 10px;
+  }
+
+  .download_div {
     position: absolute;
-    width: 8px;
-    height: 8px;
-    background: radial-gradient(circle, white, transparent);
-    border-radius: 50%;
-    animation: sparkle-animation 2s ease-out infinite;
-    opacity: 0.8;
+    bottom: 40%;
+    right: 15%;
+    background-color: rgba(255, 215, 0, 0.8);
+    padding: 12px 30px;
+    border-radius: 20px;
+    font-weight: bold;
+   border: white solid;
+
   }
 
-  @keyframes sparkle-animation {
-    0% {
-      transform: scale(0.5);
-      opacity: 1;
-    }
-    50% {
-      transform: scale(1.5);
-      opacity: 0.6;
-    }
-    100% {
-      transform: scale(0);
-      opacity: 0;
-    }
+  .download_div_md {
+    display: none;
   }
+}
+
+@media (min-width:768px) and (max-width:992px) {
+
+  .inner_padding {
+    padding: 10px;
+  }
+
+  .download_div {
+    position: absolute;
+    bottom: 40%;
+    right: 5%;
+    background-color: rgba(255, 215, 0, 0.8);
+    padding: 12px 30px;
+    border-radius: 20px;
+   border: white solid;
+    font-weight: bold;
+  }
+
+  .download_div_md {
+    display: none;
+  }
+}
+
+@media (max-width:768px) {
+  .download_div {
+    display: none;
+  }
+
+  .download_div_md {
+    position: absolute;
+    top: 7%;
+    /* right: 10%; */
+    background-color: rgba(255, 215, 0, 0.8);
+    /* Gold background for visibility */
+    padding: 12px 30px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-align: center !important;
+    animation: glitterEffect 2s infinite alternate;
+    color: white !important;
+   border: white solid;
+
+  }
+}
+
+
+.download_div_md a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+
+.download_div a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.download_div a:hover {
+  color: #ffffff;
+  /* Gold color on hover */
+  text-decoration: underline;
+
+}
+
+
+
+ 
+.download_div  {
+ 
+  animation: glitterEffect 2s infinite alternate;
+}
+
+@keyframes glitterEffect {
+  0% {
+    text-shadow: 0 0 10px #8e44ad, 0 0 20px #8e44ad, 0 0 30px #8e44ad , 0 0 40px  #8e44ad;
+    color: #FFD700;
+  }
+  50% {
+    text-shadow: 0 0 15px #FFF, 0 0 25px #FFF, 0 0 35px #FFF, 0 0 45px  #8e44ad;
+    color: #FFFAF0; /* A light cream color to contrast the gold */
+  }
+  100% {
+    text-shadow: 0 0 10px #8e44ad, 0 0 20px #8e44ad, 0 0 30px #8e44ad, 0 0 40px #8e44ad;
+    color: #FFD700;
+  }
+}
+
+
+
+.image_size_md {
+  height: 50vh !important;
+}
