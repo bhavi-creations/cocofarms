@@ -283,11 +283,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 66vh;
+    min-height: 60vh;
     background: linear-gradient(to right, #8e44ad, #f4d03f);
     overflow: hidden;
     color: #fff;
     text-align: center;
+     
   }
 }
 
@@ -409,6 +410,7 @@ body {
   .countdown-wrapper {
     padding: 20px;
     margin-left: 20px;
+    margin-top: 70px;
   }
 }
 
@@ -527,5 +529,5 @@ body {
 
 
 .image_size_md {
-  height: 50vh !important;
+  height: 40vh !important;
 }
