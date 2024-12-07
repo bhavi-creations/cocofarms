@@ -140,14 +140,14 @@ body {
 
 
 .bg_black {
-  background-color: rgba(0, 0, 0, 0.947);
+  background-color:   black;
   text-align: center;
 
 }
 
 @media (min-width:768px) {
   .image_size {
-    width: 50%;
+    width: 110%;
     height: 61vh !important;
   }
 }
